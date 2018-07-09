@@ -1,0 +1,28 @@
+@media screen and (max-width: 1280px) {
+	.bottomHeader nav li {
+		display: none;
+	}
+	.language {
+		margin-right: 100px;
+	}
+	.bottomHeader {
+		justify-content: flex-end;
+	}
+	.bottomHeader .ham {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.topHeader {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+/* CSS-стили */;
+}
+
+@media screen and (max-width: 320px) {
+/* CSS-стили */;
+}
