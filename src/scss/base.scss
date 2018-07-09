@@ -1,0 +1,180 @@
+@import "fonts";
+
+$header-color: #0066a1;
+$white-color: #fff;
+$h2-color: #282828;
+$h4-color: #fab330;
+$active-color: #149ed8;
+$a-color: #292929;
+$eng-color: #8c8c8c;
+$btn-color: #fab330;
+$btn-hover: #fab350;
+$content-color: #f9f9f9;
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	max-width: 1360px;
+	width: 100%;
+	height: 100vp;
+	margin: 0 auto;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.topHeader {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: $header-color;
+	padding: 18px 0px;
+	p {
+		margin-right: 12px;
+		color: $white-color;
+		font-family: 'MuseoSansCyrl_900';
+		font-size: 1.2em;
+	}
+	span {
+		text-transform: uppercase;
+	}
+	img {
+		cursor: pointer;
+		&:hover {
+			opacity: 0.25;
+		}
+	}
+}
+
+.bottomHeader {
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 15px 0;
+	.logo {
+		position: absolute;
+		top: 5px;
+		left: 50px;
+	}
+	nav {
+		ul {
+		display: flex;
+		flex-direction: row;
+		list-style-type: none;
+		li {
+			cursor: pointer;
+			margin-right: 30px;
+			a {
+				text-transform: uppercase;
+				text-decoration: none;
+				color: $a-color;
+				font-size: 1.05em;
+				font-family: 'MuseoSansCyrl_700';
+				&:hover, &.active {
+					color: $active-color;
+					border-bottom: 2px solid $active-color;
+				}
+			}
+		}
+	}
+	}
+	.language {
+		display: flex;
+		flex-direction: row;
+		.active-lang {
+			color: $active-color;
+			padding-right: 10px;
+			cursor: pointer;
+		}
+		.eng {
+			font-family: 'MuseoSansCyrl_500';
+			color: $eng-color;
+			border-left: 2px solid $eng-color;
+			padding-left: 10px;
+			cursor: pointer;
+			&:hover {
+				color: $active-color;
+			}
+		}
+	}
+	.search {
+		position: absolute;
+		top: 30px;
+		right: 50px;
+		cursor: pointer;
+		&:hover {
+			opacity: 0.25;
+		}
+	}
+}
+
+section {
+	background-image: url('../images/main_image.jpg'); background-repeat: no-repeat;
+	background-size: cover;
+	.slogan {
+		font-family: 'noto-serif-italic';
+		font-size: 1.8em;
+		color: $h4-color;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.slogan {
+		margin-top: 25px;
+		h4 {
+			margin: 0;
+		}
+	}
+	.content {
+		max-width: 660px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 40px 60px;
+		border: 1px solid #000;
+		border-radius: 10px;
+		margin-top: 60px;
+		background-color: $content-color;
+		margin-bottom: 90px;
+		h5 {
+			font-family: 'MuseoSansCyrl_900';
+			font-size: 1.05em;
+			color: $btn-color;
+			text-transform: uppercase;
+			margin: 0;
+		}
+		h2 {
+			font-family: 'noto-serif-italic';
+			font-size: 2.75em;
+			color: $h2-color;
+			text-align: center;
+			margin: 0;
+			margin-top: 30px;
+		}
+		a {
+			font-family: 'MuseoSansCyrl_900';
+			font-size: 1em;
+			text-transform: uppercase;
+			color: $white-color;
+			border-radius: 10px;
+			padding: 15px 25px;
+			background-color: $btn-color;
+			text-decoration: none;
+			margin-top: 30px;
+			&:hover {
+				background-color: $btn-hover;
+			}
+		}
+	}
+}
