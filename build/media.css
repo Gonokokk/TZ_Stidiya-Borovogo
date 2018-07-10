@@ -14,13 +14,18 @@
 }
 
 @media screen and (max-width: 1024px) {
+	.wrapper {
+		min-width: 1024px;
+	}
 	.topHeader {
 		display: none;
 	}
 }
 
 @media screen and (max-width: 768px) {
-/* CSS-стили */;
+	.wrapper {
+		/*max-width: 768px;*/
+	}
 }
 
 @media screen and (max-width: 320px) {
