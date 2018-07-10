@@ -17,6 +17,14 @@ $content-color: #f9f9f9;
 	text-decoration: none;
 }
 
+%picture {
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    width: inherit;
+    height: 500px;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -72,6 +80,7 @@ header {
 		position: absolute;
 		top: 5px;
 		left: 40px;
+		z-index: 100;
 	}
 	nav {
 		ul {
@@ -138,20 +147,28 @@ section {
 	position: relative;
 	display: flex;
     flex-direction: column;
-    img {
-    	position: absolute;
-    	z-index: -100;
-    	width: 100%;
-    	height: 100%;
+    .pic1 {
+    	background-image: url('../images/main_image.jpg');
+    	@extend %picture;
+    }
+    .pic2 {
+    	background-image: url('../images/choko.jpg');
+    	@extend %picture;
+    }
+    .pic3 {
+    	background-image: url('../images/food.jpg');
+    	@extend %picture;
     }
 	.slogan {
 		font-family: 'noto-serif-italic';
 		font-size: 1.8em;
 		color: $h4-color;
-		margin: 0 auto;
-		text-align: center;
-	}
-	.slogan {
+		position: absolute;
+		margin-left: auto;
+    	margin-right: auto;
+    	right: 0;
+    	left: 0;
+    	text-align: center;
 		padding-top: 25px;
 		h4 {
 			margin: 0;
@@ -160,15 +177,18 @@ section {
 		}
 	}
 	.content {
+		position: absolute;
+		top: 100px;
+		margin-left: auto;
+    	margin-right: auto;
+    	right: 0;
+    	left: 0;
 		max-width: 660px;
-		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		padding: 40px 60px;
-		border: 1px solid #000;
 		border-radius: 10px;
-		margin-top: 60px;
 		background-color: $content-color;
 		margin-bottom: 90px;
 		h5 {
