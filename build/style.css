@@ -121,8 +121,8 @@ header {
 section {
   position: relative;
   display: flex;
+  flex-direction: column;
   flex-direction: column; }
-<<<<<<< HEAD
   section .mySlides {
     display: none; }
   section .slider-nav {
@@ -166,8 +166,6 @@ section {
     cursor: pointer; }
     section #next:hover {
       opacity: 0.5; }
-=======
->>>>>>> 4e104cf5698827d18b77ae73ca66cf143864572e
   section .pic1 {
     background-image: url(00841a7328d7fda069990c383019765d.jpg); }
   section .pic2 {
