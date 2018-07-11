@@ -1,0 +1,50 @@
+@media screen and (max-width: 1280px) {
+	.bottomHeader nav li {
+		display: none;
+	}
+	.language {
+		margin-right: 100px;
+	}
+	.bottomHeader {
+		justify-content: flex-end;
+	}
+	.bottomHeader .ham {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.topHeader {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	section .content {
+		max-width: 450px;
+		top: 65px;
+		padding-top: 10px;
+	}
+	section .content h2 {
+		font-size: 1.5em;
+		margin: 0;
+	}
+	section .content h5 {
+		display: none;
+	}
+	.wrapper {
+		width: 100%;
+	}
+	section .slogan {
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.bottomHeader .logo {
+		left: 15px;
+	}
+	section .content a {
+		font-size: 0.6em;
+	}
+}

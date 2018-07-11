@@ -200,6 +200,7 @@ section {
 			opacity: 0.5;
 		}
 	}
+    flex-direction: column;
     .pic1 {
     	background-image: url('../images/main_image.jpg');
     	@extend %picture;
