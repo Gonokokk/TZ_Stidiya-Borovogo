@@ -17,6 +17,14 @@ $content-color: #f9f9f9;
 	text-decoration: none;
 }
 
+%picture {
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    width: inherit;
+    height: 500px;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -25,7 +33,7 @@ body {
 .wrapper {
 	max-width: 1360px;
 	width: 100%;
-	height: 100vp;
+	height: 100vh;
 	margin: 0 auto;
 }
 
@@ -72,6 +80,7 @@ header {
 		position: absolute;
 		top: 5px;
 		left: 40px;
+		z-index: 100;
 	}
 	nav {
 		ul {
@@ -135,18 +144,84 @@ header {
 }
 
 section {
-	background-image: url('../images/main_image.jpg'); background-repeat: no-repeat;
-	background-size: cover;
+	position: relative;
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
+    .mySlides {
+    	display:none
+    }
+    .slider-nav {
+		position: absolute;
+		bottom: 30px;
+		text-align: center;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 200;
+	}
+	.slider-nav a {
+		width: 12px;
+		height: 12px;
+		text-decoration: none;
+		color: #000;
+		display: inline-block;
+		border-radius: 50%;
+		margin: 0 5px;
+		background-color: transparent;
+  		border: 3px solid #fff;
+	}
+	.slider-nav {
+	    background-color: transparent;
+	}
+	.slider-nav a.current {
+		background-color: #fff;
+	}
+	.horizontal-controls {
+		position: absolute;
+		display: inline-block;
+		width: 17px;
+		height: 27px;
+		top: 50%;
+		margin-top: -10px;
+		z-index: 100;
+	}
+	#prev {
+		background-image: url('../images/arrow_left.png');
+		left: 60px;
+		cursor: pointer;
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+	#next {
+		background-image: url('../images/arrow_right.png');
+		right: 60px;
+		cursor: pointer;
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+    .pic1 {
+    	background-image: url('../images/main_image.jpg');
+    	@extend %picture;
+    }
+    .pic2 {
+    	background-image: url('../images/choko.jpg');
+    	@extend %picture;
+    }
+    .pic3 {
+    	background-image: url('../images/food.jpg');
+    	@extend %picture;
+    }
 	.slogan {
 		font-family: 'noto-serif-italic';
 		font-size: 1.8em;
 		color: $h4-color;
-		margin: 0 auto;
-		text-align: center;
-	}
-	.slogan {
+		position: absolute;
+		margin-left: auto;
+    	margin-right: auto;
+    	right: 0;
+    	left: 0;
+    	text-align: center;
 		padding-top: 25px;
 		h4 {
 			margin: 0;
@@ -155,15 +230,18 @@ section {
 		}
 	}
 	.content {
+		position: absolute;
+		top: 100px;
+		margin-left: auto;
+    	margin-right: auto;
+    	right: 0;
+    	left: 0;
 		max-width: 660px;
-		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		padding: 40px 60px;
-		border: 1px solid #000;
 		border-radius: 10px;
-		margin-top: 60px;
 		background-color: $content-color;
 		margin-bottom: 90px;
 		h5 {
