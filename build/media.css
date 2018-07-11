@@ -17,6 +17,9 @@
 	.topHeader {
 		display: none;
 	}
+	.horizontal-controls {
+		top: 90% !important;
+	}
 }
 
 @media screen and (max-width: 768px) {

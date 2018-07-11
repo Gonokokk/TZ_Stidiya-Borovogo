@@ -14,7 +14,7 @@
   font-family: "noto-serif-italic";
   src: url(f469de88d8bb2e4f4ead0215c0ec857e.ttf); }
 
-.bottomHeader nav ul li a, section .content a {
+.bottomHeader nav ul li a, section .content a, section .hiddenMenu nav ul li a {
   text-transform: uppercase;
   text-decoration: none; }
 
@@ -72,7 +72,7 @@ header {
     position: absolute;
     top: 5px;
     left: 40px;
-    z-index: 100; }
+    z-index: 400; }
   .bottomHeader nav ul {
     display: flex;
     flex-direction: row;
@@ -228,4 +228,21 @@ section {
       letter-spacing: 3px; }
       section .content a:hover {
         background-color: #fab350; }
+  section .hiddenMenu {
+    display: none;
+    position: absolute;
+    z-index: 300;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9); }
+    section .hiddenMenu nav {
+      margin-top: 70px;
+      text-align: center; }
+      section .hiddenMenu nav ul li {
+        margin-bottom: 10px; }
+        section .hiddenMenu nav ul li a {
+          font-family: 'MuseoSansCyrl_700';
+          color: #fff; }
+          section .hiddenMenu nav ul li a:hover {
+            color: #ddd; }
 
